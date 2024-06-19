@@ -4,7 +4,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 
 :root {
   /*-----------------------------------*\
@@ -105,11 +105,13 @@ a {
 html {
   scroll-behavior: smooth;
 }
+body {
+  font-family: "Noto Sans KR", "Cambay", sans-serif;
+}
 body#main-body {
   overflow-x: hidden;
   background: var(--bg-color);
   color: #fff;
-  font-family: "Gothic A1", "Cambay", sans-serif;
 }
 
 input,
@@ -315,6 +317,7 @@ header.active {
   color: #0421ff;
   z-index: -1;
   opacity: 0.5;
+  padding-bottom: 3rem;
 }
 .small .imgPosi img {
   width: 100%;
@@ -345,7 +348,7 @@ header.active {
   padding-block-start: 100px;
   opacity: 0;
   visibility: hidden;
-  transition: var(--transition-3);
+  transition: 3s;
   z-index: 1;
   text-align: center;
 }
@@ -385,10 +388,6 @@ header.active {
   margin-block: 14px 20px;
 }
 
-.hero-text {
-  margin-block: 10px 40px;
-}
-
 .slider-reveal {
   transform: translateY(30px);
   opacity: 0;
@@ -413,15 +412,18 @@ header.active {
   font-size: var(--fontSize-body-3);
   font-weight: bold;
   margin: 0rem 2rem;
+  word-break: keep-all;
 }
 .hero-title {
   font-size: var(--fontSize-title-1);
   margin: 1rem 3rem;
+  word-break: keep-all;
 }
 .hero-text {
   margin: 0 auto;
   font-size: var(--fontSize-body-2);
   width: 60%;
+  word-break: keep-all;
 }
 .hero .slider-item.active .section-subtitle {
   animation-delay: 500ms;
@@ -487,6 +489,7 @@ header.active {
   align-items: center;
   height: 80vh;
   position: relative;
+  overflow: hidden;
 }
 
 /* mainlogo  */
@@ -562,7 +565,9 @@ header.active {
   font-size: var(--fontSize-headline-2);
 }
 .topText p {
-  font-size: var(--fontSize-body-3);
+  font-size: var(--fontSize-body-2);
+  margin-top: 1rem;
+  word-break: keep-all;
 }
 @keyframes stroke {
   0% {
@@ -613,9 +618,11 @@ header.active {
   margin-top: 2rem;
   font-size: var(--fontSize-body-3);
   opacity: 0.6;
+  word-break: keep-all;
 }
 .infoMain h2 {
   font-size: var(--fontSize-title-1);
+  word-break: keep-all;
 }
 .mainBottom .subText {
   order: -1;
@@ -754,7 +761,7 @@ ul li .boxText p {
 
 .cardBox ul li:nth-child(1)::after {
   content: "";
-  background: url("../image/circleplus.png") no-repeat;
+  background: url("../image/circleplus.png") center no-repeat;
   background-size: 4rem;
   position: absolute;
   z-index: 1;
@@ -792,7 +799,7 @@ ul li .boxText p {
 
 .cardBox ul li:nth-child(2)::after {
   content: "";
-  background: url("../image/circleplus.png") no-repeat;
+  background: url("../image/circleplus.png") center no-repeat;
   background-size: 4rem;
   position: absolute;
   z-index: 1;
@@ -830,7 +837,7 @@ ul li .boxText p {
 
 .cardBox ul li:nth-child(3)::after {
   content: "";
-  background: url("../image/circleplus.png") no-repeat;
+  background: url("../image/circleplus.png") center no-repeat;
   background-size: 4rem;
   position: absolute;
   z-index: 1;

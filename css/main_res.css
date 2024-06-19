@@ -1,7 +1,7 @@
 /**
-  *1300px
+  *1440px
   */
-@media (max-width: 1300px) {
+@media (max-width: 1440px) {
   .navWrap > nav {
     display: none;
   }
@@ -9,7 +9,10 @@
     grid-template-columns: 2fr 0.2fr 0.2fr;
   }
 }
-@media (max-width: 1200px) {
+/**
+  *1280px
+  */
+@media (max-width: 1280px) {
   .cardBox ul {
     flex-wrap: wrap;
     flex: 1;
@@ -32,11 +35,18 @@
     transform: translateY(0);
     transition: opacity 1s, transform 1s;
   }
+
+  .cardBox ul li:nth-child(1)::before,
+  .cardBox ul li:nth-child(2)::before,
+  .cardBox ul li:nth-child(3)::before {
+    left: -8rem;
+    bottom: -12rem;
+  }
 }
 /**
-  *1000px
+  *1024px
   */
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .hero .slider-btn {
     width: 7rem;
   }
@@ -48,15 +58,10 @@
     order: initial;
   }
 
-  #business {
-    margin: 15rem auto;
-  }
   #network {
     padding-top: 10rem;
   }
-  .text-wrap {
-    display: none;
-  }
+
   .footerWrap {
     width: 99%;
     padding: 3rem;
@@ -70,10 +75,10 @@
   }
   .footerLeft a {
     display: block;
-    width:100%;
+    width: 100%;
   }
-  .footerLeft .fText{
-    width:50%;
+  .footerLeft .fText {
+    width: 50%;
     margin-top: 2rem;
     margin-bottom: 4rem;
   }
@@ -93,6 +98,31 @@
   }
 }
 /**
+  *768px
+  */
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 1.4rem;
+  }
+  .hiddenNav .small {
+    display: none;
+  }
+  .infoMain .subText {
+    width: 80%;
+    margin: 2.5rem auto 2.5rem;
+  }
+  .text-box {
+    transform: translateX(-3rem);
+  }
+  .hiddenNav ul li {
+    text-align: center;
+  }
+  #network {
+    padding-bottom: var(--Bottom-02);
+    padding-top: var(--Top-01);
+  }
+}
+/**
   *500px
   */
 
@@ -100,9 +130,7 @@
   /**
   * INDEX
   */
-  .hiddenNav .small {
-    display: none;
-  }
+
   .hero-title {
     font-size: 2.5rem;
   }
@@ -113,7 +141,7 @@
   .infoText h4 {
     font-size: 2.5rem;
   }
-  .body-2 {
+  .hero-text {
     font-size: 1.5rem;
     width: 70%;
     margin: 1rem auto 0;
@@ -150,15 +178,21 @@
   .hero-title {
     font-size: 1.8rem;
   }
-  .body-2 {
+  .infoText h4.visible {
+    font-size: 2rem;
+  }
+  .infoText p.visible {
     font-size: 1.1rem;
   }
-  .infoText{
-    height:50vh;
+  .hero-text {
+    font-size: 1.1rem;
   }
-  .mainlogo{
-    width:300px;
-    bottom:-15.5rem;
+  .infoText {
+    height: 50vh;
+  }
+  .mainlogo {
+    width: 300px;
+    bottom: -15.5rem;
   }
   .infoText h2 {
     font-size: 3.5rem;
@@ -166,13 +200,21 @@
   .infoText h4 {
     font-size: 2rem;
   }
+  .text-wrap {
+    display: none;
+  }
+  .cardBox ul li:nth-child(1)::after,
+  .cardBox ul li:nth-child(2)::after,
+  .cardBox ul li:nth-child(3)::after {
+    background-size: 3rem;
+  }
   .navWrap {
     width: 80%;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
   }
   .navWrap #logo img {
-    width: 80%;
+    width: 60%;
   }
   .navWrap .lang {
     display: none;
@@ -186,8 +228,24 @@
     grid-template-rows: 50vh;
   }
   #business {
-    margin-top: 0rem;
-    margin-bottom: 10rem;
+    padding-top: 10rem;
+  }
+  .cardBox ul {
+    gap: 3rem;
+    margin-top: -5rem;
+  }
+  .cardBox ul li {
+    height: 30vh;
+  }
+  .cardBox ul li .boxText {
+    left: 1rem;
+    top: 1rem;
+  }
+  .cardBox ul li .boxText h5 {
+    font-size: 1.5rem;
+  }
+  ul li .boxText p {
+    margin-top: 0;
   }
   .mainText h5 {
     font-size: var(--fontSize-body-3);
@@ -196,7 +254,7 @@
     display: none;
   }
   #network {
-    padding-bottom: 15rem;
+    padding-bottom: 10rem;
   }
 
   .mainText h2 {
@@ -214,8 +272,8 @@
     font-size: var(--fontSize-body-3);
     margin-bottom: 1rem;
   }
-  .footerLeft .fText{
-    width:100%;
+  .footerLeft .fText {
+    width: 100%;
     margin-bottom: 0rem;
-}
+  }
 }

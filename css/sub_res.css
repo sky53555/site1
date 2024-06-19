@@ -1,10 +1,21 @@
 /***********************
 
-1500px
+1440px
 
 **************************/
-@media (max-width: 1500px) {
+@media (max-width: 1440px) {
   /* intro */
+  #intro {
+    padding-bottom: var(--Bottom-02);
+  }
+  #subIntro .subText h3 {
+    width: 60%;
+    word-break: keep-all;
+  }
+  #subIntro .subText h3 + img {
+    display: none;
+  }
+
   svg:nth-of-type(1) {
     transform: translateX(0rem);
   }
@@ -17,15 +28,15 @@
   /* business */
   #innoGood .wrapCenter {
     grid-template-columns: 1fr;
-    height: 50vh;
     width: fit-content;
+    height: fit-content;
   }
   .innoCon1 p {
     padding: 2rem 5rem 2.5rem;
     font-size: 1.5rem;
   }
   .innoCon3 h2 {
-    left: 33rem;
+    left: 25rem;
     font-size: 3rem;
   }
   .innoCon3 p {
@@ -33,7 +44,17 @@
     font-size: 1.8rem;
     right: -15rem;
   }
+  #innoGood .wrapCenter .mainText2 {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
   /* esg */
+  #esg > h2 {
+    word-break: keep-all;
+    width: 80%;
+    margin: 0 auto;
+  }
   #esg {
     padding-top: 10rem;
   }
@@ -41,9 +62,24 @@
     grid-template-columns: 1fr;
     padding: 2rem;
   }
+  .esgIcons h2 {
+    font-size: 1.5rem;
+  }
+  .esgIcons .icon:nth-of-type(4) {
+    left: -5rem;
+  }
+  .esgIcons .icon:nth-of-type(3) {
+    right: -5rem;
+  }
+  #respon .twoCol {
+    gap: 3rem;
+  }
   /* marketing */
-  .newCon ul li {
-    min-width: 300px;
+  .newCon ul {
+    height: 200vh;
+  }
+  .newCon figure {
+    height: 35vh;
   }
   .animated-button .more {
     transform: translateX(-10px);
@@ -58,24 +94,10 @@
 
 /***********************
 
-1400px
+1280px
 
 **************************/
-@media (max-width: 1400px) {
-  /* intro */
-  #subIntro .subText h3 {
-    width: 60%;
-  }
-  #subIntro .subText h3 + img {
-    display: none;
-  }
-
-  /* marketing */
-  .newCon ul li img {
-    height: 65%;
-  }
-}
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   /* intro */
   .subText h3 {
     width: 50%;
@@ -131,16 +153,17 @@
     height: 40vh;
   }
   #report {
-    margin-top: 20rem;
+    margin-top: var(--Top-01);
   }
 }
 /***********************
 
-1000px
+1024px
 
 **************************/
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   /* intro */
+
   .circles {
     grid-template-columns: 1fr;
   }
@@ -153,25 +176,27 @@
   .subText h3 + img {
     display: none;
   }
-  .subText h3 {
-    top: 49%;
-    width: 80%;
+  #subIntro .subText h3 {
+    top: 56%;
+    width: 60%;
+
   }
   .groupText {
     top: 70%;
   }
   .groupText .imgText img {
-    right: 11rem;
+    right: 8rem;
   }
   #subIntro {
     background-size: 90%;
     background-position: 6rem 15rem;
   }
-  #subIntro .subText h3 {
-    top: 50%;
-    width: 50%;
+  #esg > h2{
+    padding-bottom: 10rem;
   }
-
+  #respon{
+    padding-top: 10rem;
+  }
   /* business */
   .itemHead strong {
     margin-left: 2rem;
@@ -183,6 +208,9 @@
   }
 
   /* marketing */
+  .newCon ul li {
+    width: 300px;
+  }
   #infoCon .twoCol {
     grid-template-columns: 1fr;
     grid-template-rows: 1.5fr 2fr;
@@ -232,9 +260,9 @@
 }
 /***********************
 
-700px
+768px
 **************************/
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   /* intro */
   .introText {
     padding: 10rem 2rem;
@@ -242,15 +270,30 @@
   svg:nth-of-type(1),
   svg:nth-of-type(2),
   svg:nth-of-type(3) {
-    transform: translateX(-2rem);
+    transform: translateX(-1rem);
     width: 600px;
   }
-
+  .circles svg.start-animation circle.anime1 {
+    animation-delay: initial;
+  }
+  .circles svg.start-animation circle.anime2 {
+    animation-delay: 1s;
+  }
+  .circles svg.start-animation text.text2 {
+    animation-delay: 3s;
+  }
+  .circles svg.start-animation circle.anime3 {
+    animation-delay: 2s;
+  }
+  .circles svg.start-animation text.text3 {
+    animation-delay: 4s;
+  }
   .introText h3 {
     font-size: 3rem;
   }
   #subIntro .subText h3 {
     width: 80%;
+    top: 55%;
   }
   #subIntro .imgs {
     row-gap: 20rem;
@@ -258,8 +301,20 @@
   #partners {
     padding-top: 10rem;
   }
+  .groupText {
+    top: 75%;
+  }
   .groupText .imgText ~ p {
-    font-size: 1rem;
+    font-size: 1.5rem;
+  }
+  .groupText .imgText img {
+    right: 6rem;
+  }
+  #intro {
+    padding-bottom: var(--Bottom-02);
+  }
+  .backtoTop {
+    bottom: 15rem;
   }
   /* business */
   #bus .wrapCenter {
@@ -330,7 +385,8 @@
   .stikyCo .mainText2 {
     width: 100%;
     position: inherit;
-    height: 20vh;
+    height: 5vh;
+    margin-bottom: 1rem;
   }
   .newCon {
     width: 100%;
@@ -339,23 +395,24 @@
     align-items: center;
   }
   .newCon ul {
-    width: 90%;
+    width: 350px;
     margin: 0 auto;
-    height: 160vh;
+    height: 180vh;
     align-items: center;
   }
   .newCon ul li {
+    width: 100%;
     height: 45vh;
   }
   .newCon ul li:nth-of-type(1) {
     right: initial;
   }
   .newCon ul li:nth-of-type(2) {
-    top: 35rem;
+    top: 40rem;
   }
   .newCon ul li:nth-of-type(3) {
     right: initial;
-    top: 70rem;
+    top: 80rem;
   }
 }
 
@@ -506,7 +563,7 @@
   svg:nth-of-type(1),
   svg:nth-of-type(2),
   svg:nth-of-type(3) {
-    transform: translateX(-2.5rem);
+    transform: translateX(-2rem);
     width: 300px;
   }
   #intro {
@@ -536,20 +593,20 @@
     row-gap: 14rem;
   }
   #subIntro .subText h3 {
-    top: 37%;
+    top: 42%;
     font-size: 1rem;
   }
   #partners {
     padding-top: 10rem;
   }
   .groupText {
-    top: 67%;
+    top: 76%;
   }
   .groupText .imgText ~ p {
     font-size: 1rem;
   }
   .groupText .imgText img {
-    right: 4rem;
+    right: 2rem;
   }
 
   /* business */
@@ -559,10 +616,26 @@
   #dragBtn {
     width: 30%;
   }
+  #value {
+    padding-bottom: var(--Bottom-02);
+  }
   #value .mainText2 {
     width: 80%;
   }
-
+  .valueimgs {
+    grid-template-columns: repeat(4, 300px);
+    gap: 2rem;
+    transform: translate(20%, 10%);
+  }
+  .imgWith .imgText p {
+    font-size: 1.2rem;
+  }
+  .imgWith .imgText p + h2 {
+    font-size: 1rem;
+  }
+  .imgWith {
+    height: 30vh;
+  }
   #innoGood .wrapCenter {
     padding: 2rem;
     height: 70%;
@@ -576,6 +649,7 @@
   }
   .busContent li .itemHead {
     margin: 0 2rem;
+    height: 80px;
   }
   .itemHead span {
     width: 2rem;
@@ -591,6 +665,7 @@
     height: 1300vh;
   }
   .scroll_section {
+    touch-action: pan-x;
     width: 1300vw;
   }
 
@@ -629,26 +704,39 @@
     font-size: 1rem;
   }
   /* marketing */
-  .newCon ul {
-    width: 80%;
-    margin: 0 3rem;
-  }
-
-  .newCon ul li {
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 40vh;
-  }
-  .newCon ul li img {
-    height: 55%;
+  .stikyCo .mainText2 {
+    height: 50px;
+    margin-bottom: 0;
   }
   .newsText h2 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+  }
+  .newCon {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .newCon ul {
+    width: 500px;
+    margin: 0 auto;
+    height: 130vh;
+  }
+  .newCon ul li {
+    width: 100%;
+  }
+  .newCon ul li:nth-of-type(2) {
+    top: 27rem;
+  }
+  .newCon ul li:nth-of-type(3) {
+    top: 52rem;
+  }
+  .newCon figure {
+    height: 20vh;
+  }
+  #infoCon .twoCol {
+    width: 90%;
   }
   #infoCon h2 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .rightTwo .btPo li {
     font-size: 1rem;

@@ -43,7 +43,7 @@
               <div class="small">
                 <div class="imgPosi">
                   <h2>CHANG</h2>
-                  <img src="image/lightsbuildings.jpg" alt="" />
+                  <img src="image/lightsbuildings.jpg" alt="" loading="lazy" />
                 </div>
               </div>
               <ul>
@@ -97,6 +97,7 @@
                   height="950"
                   alt=""
                   class="img-cover"
+                  loading="lazy"
                 />
               </div>
 
@@ -121,6 +122,7 @@
                   height="950"
                   alt=""
                   class="img-cover"
+                  loading="lazy"
                 />
               </div>
 
@@ -145,6 +147,7 @@
                   height="950"
                   alt=""
                   class="img-cover"
+                  loading="lazy"
                 />
               </div>
 
@@ -244,7 +247,12 @@
           <div class="infoMain">
             <div class="mainTop">
               <div class="img-box" data-reveal="left">
-                <img src="image/buildingglass.jpg" alt="" class="img" />
+                <img
+                  src="image/buildingglass.jpg"
+                  alt=""
+                  class="img"
+                  loading="lazy"
+                />
               </div>
               <div class="subText">
                 <h2 data-reveal="right">
@@ -260,7 +268,12 @@
             </div>
             <div class="mainBottom">
               <div class="img-box" data-reveal="right">
-                <img src="image/cityscape.jpg" alt="" class="img" />
+                <img
+                  src="image/cityscape.jpg"
+                  alt=""
+                  class="img"
+                  loading="lazy"
+                />
               </div>
               <div class="subText">
                 <h2 data-reveal="left">
@@ -312,7 +325,7 @@
          -->
         <section id="network">
           <div class="netMap">
-            <img src="image/map.png" alt="" class="img-cover" />
+            <img src="image/map.png" alt="" class="img-cover" loading="lazy" />
 
             <div class="dots">
               <span></span>
@@ -358,7 +371,7 @@
       <footer>
         <div class="footerWrap">
           <div class="footerLeft">
-            <a href="#"><img src="image/logo-w.png" alt="" /></a>
+            <a href="index.html"><img src="image/logo-w.png" alt="" /></a>
             <div class="fText">
               <span><a href="#">개인정보처리방침</a></span>
               <span><a href="#">법적고지</a></span>
@@ -436,7 +449,7 @@
           topTextElements.forEach((element) => {
             element.classList.add("visible");
           });
-        }, 6000); // 3초 후 애니메이션 시작
+        }, 3000); // 3초 후 애니메이션 시작
       }
 
       function handleIntersection(entries, observer) {
@@ -444,11 +457,10 @@
           if (entry.isIntersecting && !svgAnimated) {
             console.log("진입");
             svgAnimated = true; // 플래그를 설정하여 중복 실행 방지
-            setTimeout(() => {
-              console.log("시작");
-              animateSVG();
-              animateTopText();
-            }, 2000);
+
+            console.log("시작");
+            animateSVG();
+            animateTopText();
           }
         });
       }
@@ -594,14 +606,18 @@
       });
 
       const updateSliderPos = function () {
-        lastActiveSliderItem.classList.remove("active");
-        btnsItem.classList.remove("active");
+        // 모든 슬라이드와 버튼에서 'active' 클래스 제거
+        heroSliderItems.forEach((item) => item.classList.remove("active"));
+        btns.forEach((button) => button.classList.remove("active"));
+
+        // 현재 슬라이드와 버튼에 'active' 클래스 추가
         heroSliderItems[currentSlidePos].classList.add("active");
         btns[currentSlidePos].classList.add("active");
+
+        // 'lastActiveSliderItem'과 'btnsItem' 업데이트
         lastActiveSliderItem = heroSliderItems[currentSlidePos];
         btnsItem = btns[currentSlidePos];
       };
-
       const slideNext = function () {
         if (currentSlidePos >= heroSliderItems.length - 1) {
           currentSlidePos = 0;
