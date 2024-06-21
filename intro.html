@@ -315,7 +315,7 @@
         const observerOptions = {
           root: null, // viewport가 기준
           rootMargin: "0px",
-          threshold: 0.5, // 50% 요소가 보여질 때
+          threshold: 0, // 50% 요소가 보여질 때
         };
 
         const observer = new IntersectionObserver((entries, observer) => {

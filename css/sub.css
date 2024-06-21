@@ -501,6 +501,10 @@ body.sub2-body {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
 }
+.text01 h3,
+.text01 p {
+  word-break: break-all;
+}
 .itemWrap .itemText h3 {
   margin-bottom: 20px;
 }
@@ -508,9 +512,11 @@ body.sub2-body {
 .active .itemContent {
   border-top: 1px solid rgb(185, 185, 185);
 }
-
+.itemContent .itemImg {
+  height: 30vh;
+}
 .itemContent .itemImg img {
-  width: 90%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
@@ -969,6 +975,7 @@ body.sub4-body {
 .newCon ul li img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 2rem;
   transition: 1s;
 }

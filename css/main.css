@@ -47,6 +47,7 @@
 
   --Top-01: 15rem;
   --Top-02: 10rem;
+  --Top-03: 5rem;
 
   --Bottom-01: 20rem;
   --Bottom-02: 15rem;
@@ -81,6 +82,7 @@
 .mainText .fontLight {
   font-weight: 500;
   font-size: var(--fontSize-title-4);
+  word-break: keep-all;
 }
 /*-----------------------------------*\
       #RESET
@@ -169,6 +171,9 @@ header.active {
 }
 .navWrap #logo {
   justify-self: left;
+}
+.navWrap #logo img {
+  width: 80%;
 }
 .navWrap ul {
   display: flex;
@@ -364,11 +369,14 @@ header.active {
   left: 0;
   width: 100%;
   height: 100%;
-  transform: scale(1.15);
   pointer-events: none;
   user-select: none;
   z-index: -1;
   filter: brightness(70%);
+  border: 1px solid blue;
+}
+.hero .slider-bg img {
+  object-fit: cover;
 }
 
 .hero .slider-item.active .slider-bg {
@@ -377,10 +385,10 @@ header.active {
 
 @keyframes smoothScale {
   0% {
-    transform: scale(1);
+    transform: scale(1.2);
   }
   100% {
-    transform: scale(1.15);
+    transform: scale(1.3);
   }
 }
 
@@ -510,6 +518,7 @@ header.active {
   animation: revealLogo 3s ease-in-out forwards;
   animation-play-state: paused; /* 애니메이션을 멈춘 상태로 시작 */
   bottom: 0;
+  border: 1px solid orange;
 }
 .topText {
   z-index: 1;
@@ -600,15 +609,22 @@ header.active {
   opacity: 1;
   transform: translateY(0);
 }
+.mainTop {
+  border: 1px solid lime;
+}
+.img-box {
+  height: 70vh;
+}
 .mainTop,
 .mainBottom {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 80vh;
   align-items: center;
 }
-
+.infoMain {
+  border: 1px solid blue;
+}
 .infoMain .subText {
   margin: 0 auto;
   width: 75%;

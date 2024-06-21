@@ -13,7 +13,10 @@
   *1280px
   */
 @media (max-width: 1280px) {
-  .cardBox ul {
+  .hero-text {
+    font-size: 1.3rem;
+  }
+  /* .cardBox ul {
     flex-wrap: wrap;
     flex: 1;
     margin-top: 0;
@@ -41,7 +44,7 @@
   .cardBox ul li:nth-child(3)::before {
     left: -8rem;
     bottom: -12rem;
-  }
+  } */
 }
 /**
   *1024px
@@ -101,15 +104,46 @@
   *768px
   */
 @media (max-width: 768px) {
+  .hero {
+    min-height: 90vh;
+  }
+  .hero .slider-item {
+    top: 45%;
+  }
+  .btns {
+    bottom: 3rem;
+  }
+  .hero .slider-bg {
+    width: 120%;
+    height: 120%;
+  }
   .hero-text {
     font-size: 1.4rem;
   }
+
   .hiddenNav .small {
     display: none;
   }
+
+  .infoText {
+    height: 60vh;
+  }
+  /* .mainTop,
+  .mainBottom {
+    height: 85vh;
+  } */
+  .img-box {
+    border: 1px solid red;
+    height: 60vh;
+  }
   .infoMain .subText {
     width: 80%;
-    margin: 2.5rem auto 2.5rem;
+    padding: 2.5rem 0;
+  }
+  .mainlogo {
+    width: 500px;
+    height: 600px;
+    bottom: -10rem;
   }
   .text-box {
     transform: translateX(-3rem);
@@ -117,9 +151,45 @@
   .hiddenNav ul li {
     text-align: center;
   }
+  .mainText {
+    margin-bottom: -1rem;
+  }
+  .cardBox ul {
+    flex-wrap: wrap;
+    flex: 1;
+    margin-top: 0;
+  }
+  .cardBox ul li {
+    width: 100%;
+    min-width: 200px;
+    height: 40vh;
+  }
+  .cardBox ul li:nth-child(1) {
+    margin-top: 6rem;
+  }
+  .cardBox ul li:nth-child(3) {
+    margin-top: 0;
+  }
+
+  .cardBox ul li {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s, transform 1s;
+  }
+
+  .cardBox ul li:nth-child(1)::before,
+  .cardBox ul li:nth-child(2)::before,
+  .cardBox ul li:nth-child(3)::before {
+    left: -8rem;
+    bottom: -12rem;
+  }
+
   #network {
     padding-bottom: var(--Bottom-02);
     padding-top: var(--Top-01);
+  }
+  #business {
+    padding-top: var(--Top-02);
   }
 }
 /**
@@ -175,6 +245,15 @@
   *320px
   */
 @media (max-width: 320px) {
+  .hiddenNav ul li a {
+    font-size: 1.5rem;
+  }
+  .hiddenNav ul {
+    gap: 2rem;
+  }
+  .hero {
+    height: 100vh;
+  }
   .hero-title {
     font-size: 1.8rem;
   }
@@ -190,10 +269,13 @@
   .infoText {
     height: 50vh;
   }
-  .mainlogo {
-    width: 300px;
-    bottom: -15.5rem;
+  .img-box {
+    height: 50vh;
   }
+  /* .mainTop,
+  .mainBottom {
+    height: 90vh;
+  } */
   .infoText h2 {
     font-size: 3.5rem;
   }
@@ -203,13 +285,25 @@
   .text-wrap {
     display: none;
   }
+  .infoMain h2 {
+    font-size: 1.5rem;
+  }
+  .infoMain .subText p {
+    font-size: 1.1rem;
+  }
   .cardBox ul li:nth-child(1)::after,
   .cardBox ul li:nth-child(2)::after,
   .cardBox ul li:nth-child(3)::after {
     background-size: 3rem;
   }
+  .cardBox ul li:nth-child(1)::before,
+  .cardBox ul li:nth-child(2)::before,
+  .cardBox ul li:nth-child(3)::before {
+    left: -5rem;
+    bottom: -5rem;
+  }
   .navWrap {
-    width: 80%;
+    width: 90%;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
   }
@@ -220,32 +314,65 @@
     display: none;
   }
   .toggleBtn {
+    width: 30px;
+    height: 20px;
     justify-self: end;
   }
-
-  .mainTop,
-  .mainBottom {
-    grid-template-rows: 50vh;
+  .toggleBtn.active span:nth-of-type(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .toggleBtn.active span:nth-of-type(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  .mainlogo {
+    transform: scale(0.7);
+  }
+  .logo-container {
+    bottom: -6rem;
   }
   #business {
-    padding-top: 10rem;
+    padding-top: var(--Bottom-03);
+  }
+  .mainText {
+    margin-bottom: 2.5rem;
   }
   .cardBox ul {
-    gap: 3rem;
-    margin-top: -5rem;
+    flex-wrap: wrap;
+    flex: 1;
+    margin-top: 0;
+    gap: 4rem;
   }
   .cardBox ul li {
-    height: 30vh;
+    width: 100%;
+    min-width: 200px;
+    height: 40vh;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s, transform 1s;
+  }
+  .cardBox ul li:nth-child(1) {
+    margin-top: 2rem;
+  }
+  .cardBox ul li:nth-child(3) {
+    margin-top: 0;
+  }
+
+  .cardBox ul li:nth-child(1)::before,
+  .cardBox ul li:nth-child(2)::before,
+  .cardBox ul li:nth-child(3)::before {
+    left: -8rem;
+    bottom: -12rem;
   }
   .cardBox ul li .boxText {
     left: 1rem;
     top: 1rem;
   }
-  .cardBox ul li .boxText h5 {
-    font-size: 1.5rem;
+  ul li .boxText h5 {
+    font-size: 1.2rem;
   }
   ul li .boxText p {
     margin-top: 0;
+    font-size: 0.8rem;
   }
   .mainText h5 {
     font-size: var(--fontSize-body-3);
@@ -254,7 +381,8 @@
     display: none;
   }
   #network {
-    padding-bottom: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
   }
 
   .mainText h2 {
@@ -275,5 +403,14 @@
   .footerLeft .fText {
     width: 100%;
     margin-bottom: 0rem;
+  }
+  .social {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .social ion-icon {
+    margin-right: 0;
   }
 }

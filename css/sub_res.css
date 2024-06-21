@@ -4,12 +4,13 @@
 
 **************************/
 @media (max-width: 1440px) {
-  /* intro */
+  /* 1440intro */
   #intro {
     padding-bottom: var(--Bottom-02);
   }
   #subIntro .subText h3 {
     width: 60%;
+    top: 58%;
     word-break: keep-all;
   }
   #subIntro .subText h3 + img {
@@ -25,11 +26,15 @@
   svg:nth-of-type(3) {
     transform: translateX(-10rem);
   }
-  /* business */
+  /* 1440business */
   #innoGood .wrapCenter {
     grid-template-columns: 1fr;
     width: fit-content;
     height: fit-content;
+  }
+  .innoCon1 img {
+    width: 250px;
+    height: 250px;
   }
   .innoCon1 p {
     padding: 2rem 5rem 2.5rem;
@@ -49,7 +54,7 @@
     text-align: center;
   }
 
-  /* esg */
+  /* 1440esg */
   #esg > h2 {
     word-break: keep-all;
     width: 80%;
@@ -74,12 +79,13 @@
   #respon .twoCol {
     gap: 3rem;
   }
-  /* marketing */
+  /* 1440marketing */
   .newCon ul {
-    height: 200vh;
+    height: 220vh;
+    min-height: initial;
   }
   .newCon figure {
-    height: 35vh;
+    height: 40vh;
   }
   .animated-button .more {
     transform: translateX(-10px);
@@ -98,7 +104,8 @@
 
 **************************/
 @media (max-width: 1280px) {
-  /* intro */
+  /* 1280intro */
+
   .subText h3 {
     width: 50%;
   }
@@ -106,7 +113,7 @@
     top: 80%;
   }
 
-  /* business*/
+  /* 1280business*/
   .sticky_parent {
     height: 400vh;
   }
@@ -117,8 +124,8 @@
     width: 15%;
   }
   .innoCon1 img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
   }
   .innoCon2 {
     width: 25%;
@@ -137,15 +144,27 @@
   .innoCon3 {
     width: 30%;
   }
+  .imgWith {
+    height: 60vh;
+  }
+  .newCon ul {
+    height: 240vh;
+  }
+  /* 1280esg */
 
-  /* esg */
+  #respon .twoCol {
+    gap: 1rem;
+  }
+  .twoCol .colLeft .arBtn {
+    margin-top: 5rem;
+  }
   #respon .twoCol {
     grid-template-columns: 1fr;
   }
   .twoCol .colLeft {
     width: 80%;
     margin: 0 auto;
-    height: 28vh;
+    height: 32vh;
   }
   .swiper {
     width: 80%;
@@ -162,7 +181,7 @@
 
 **************************/
 @media (max-width: 1024px) {
-  /* intro */
+  /* 1024intro */
 
   .circles {
     grid-template-columns: 1fr;
@@ -179,7 +198,6 @@
   #subIntro .subText h3 {
     top: 56%;
     width: 60%;
-
   }
   .groupText {
     top: 70%;
@@ -191,13 +209,13 @@
     background-size: 90%;
     background-position: 6rem 15rem;
   }
-  #esg > h2{
+  #esg > h2 {
     padding-bottom: 10rem;
   }
-  #respon{
+  #respon {
     padding-top: 10rem;
   }
-  /* business */
+  /* 1024business */
   .itemHead strong {
     margin-left: 2rem;
   }
@@ -207,14 +225,13 @@
     text-align: center;
   }
 
-  /* marketing */
+  /* 1024marketing */
   .newCon ul li {
     width: 300px;
   }
   #infoCon .twoCol {
     grid-template-columns: 1fr;
-    grid-template-rows: 1.5fr 2fr;
-    height: 130vh;
+    grid-template-rows: 40vh 50vh;
   }
 
   .animated-button .more {
@@ -227,7 +244,7 @@
   .animated-button .arr-2 {
     display: none;
   }
-  /* esg */
+  /* 1024esg */
   .esgIcons {
     background-image: none;
     height: 150vh;
@@ -263,7 +280,7 @@
 768px
 **************************/
 @media (max-width: 768px) {
-  /* intro */
+  /* 768intro */
   .introText {
     padding: 10rem 2rem;
   }
@@ -316,13 +333,25 @@
   .backtoTop {
     bottom: 15rem;
   }
-  /* business */
+  /* 768business */
   #bus .wrapCenter {
     grid-template-columns: 1fr;
   }
   #bus .all {
     justify-self: start;
     margin-top: 2rem;
+  }
+  #value {
+    padding-bottom: var(--Bottom-02);
+  }
+  .valueimgs {
+    grid-template-columns: 500px 300px 300px 500px;
+  }
+  .imgWith {
+    height: 40vh;
+  }
+  #value .mainText2 {
+    width: 80%;
   }
   .itemWrap {
     grid-template-columns: 1fr;
@@ -338,7 +367,7 @@
     width: 540vw;
   }
   .innoCon1 {
-    width: 10%;
+    width: 15%;
   }
   .innoCon1 img {
     width: 200px;
@@ -351,6 +380,9 @@
   .innoCon2 .num {
     font-size: 3rem;
   }
+  .innoCon3 {
+    width: 27%;
+  }
   .innoCon1 p {
     font-size: 1.5rem;
   }
@@ -360,23 +392,21 @@
     right: 0rem;
     bottom: 5rem;
   }
-  .innoCon3 {
-    width: 20%;
-  }
+
   .innoCon3 h2 {
     left: 20rem;
     font-size: 2.5rem;
   }
-  .innoCon3 img {
-    width: 300px;
-  }
+
   .innoCon3 p {
     font-size: 1.5rem;
-    right: -4rem;
+    right: -15rem;
     width: 60%;
   }
-
-  /* marketing */
+  .innoText {
+    text-align: center;
+  }
+  /* 768marketing */
   .stikyCo {
     flex-wrap: wrap;
     padding-top: 10rem;
@@ -388,6 +418,7 @@
     height: 5vh;
     margin-bottom: 1rem;
   }
+
   .newCon {
     width: 100%;
     display: flex;
@@ -396,14 +427,15 @@
   }
   .newCon ul {
     width: 350px;
-    margin: 0 auto;
-    height: 180vh;
+    margin: 8rem auto 0;
+    height: 190vh;
     align-items: center;
   }
   .newCon ul li {
     width: 100%;
     height: 45vh;
   }
+
   .newCon ul li:nth-of-type(1) {
     right: initial;
   }
@@ -414,6 +446,12 @@
     right: initial;
     top: 80rem;
   }
+  .rightTwo .btPo li {
+    font-size: 1rem;
+  }
+  #infoCon .twoCol {
+    grid-template-rows: 40vh 50vh;
+  }
 }
 
 /***********************
@@ -421,7 +459,7 @@
 500px
 **************************/
 @media (max-width: 500px) {
-  /* intro */
+  /*500intro */
   #partners img {
     width: 10rem;
     margin-right: 8rem;
@@ -495,7 +533,7 @@
   .partners {
     padding-top: 10rem;
   }
-  /* business */
+  /* 500business */
   .busContent li .itemHead {
     grid-template-columns: 1fr 1fr 1fr;
     margin: 0 2rem;
@@ -532,9 +570,14 @@
     bottom: 6rem;
   }
   .innoText li {
+    text-align: center;
     font-size: 1.3rem;
+    word-break: keep-all;
   }
-  /* esg */
+  .innoText li:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  /* 500esg */
   .twoCol .colLeft {
     height: 35vh;
   }
@@ -557,8 +600,9 @@
   .mainText2 h5 {
     font-size: 1.5rem;
     margin-top: 1rem;
+    word-break: keep-all;
   }
-  /* intro */
+  /* 320intro */
 
   svg:nth-of-type(1),
   svg:nth-of-type(2),
@@ -567,7 +611,7 @@
     width: 300px;
   }
   #intro {
-    padding-bottom: 10rem;
+    padding-bottom: var(--Bottom-03);
   }
   .introText h2 {
     font-size: 3rem;
@@ -597,7 +641,14 @@
     font-size: 1rem;
   }
   #partners {
-    padding-top: 10rem;
+    padding-top: var(--Top-03);
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 10rem;
+  }
+  .partner01,
+  .partner02 {
+    margin-top: 7rem;
   }
   .groupText {
     top: 76%;
@@ -609,15 +660,17 @@
     right: 2rem;
   }
 
-  /* business */
+  /* 320business */
   #bus {
     padding-top: 0;
+    padding-bottom: var(--Bottom-03);
   }
   #dragBtn {
     width: 30%;
   }
   #value {
-    padding-bottom: var(--Bottom-02);
+    padding-top: var(--Top-03);
+    padding-bottom: var(--Bottom-03);
   }
   #value .mainText2 {
     width: 80%;
@@ -627,30 +680,49 @@
     gap: 2rem;
     transform: translate(20%, 10%);
   }
-  .imgWith .imgText p {
-    font-size: 1.2rem;
+  .imgWith .imgText {
+    bottom: 1.5rem;
+    left: 1.5rem;
   }
-  .imgWith .imgText p + h2 {
+  .imgWith .imgText p {
     font-size: 1rem;
   }
-  .imgWith {
-    height: 30vh;
+  .imgWith .imgText p + h2 {
+    font-size: 0.8rem;
+  }
+  .innoCon1 img {
+    width: 150px;
+    height: 150px;
+  }
+  .innoCon2 {
+    padding: 1rem;
+  }
+  .innoCon2 ul {
+    margin-left: 0;
+  }
+  .innoCon2 .num {
+    font-size: 2rem;
   }
   #innoGood .wrapCenter {
     padding: 2rem;
     height: 70%;
-    gap: 0;
+    gap: 3rem;
+    margin-top: -4rem;
   }
   #innoGood h3 {
     font-size: 2rem;
   }
   .innoText li {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+  .busContent ul {
+    gap: 1.5rem;
   }
   .busContent li .itemHead {
     margin: 0 2rem;
-    height: 80px;
+    height: 55px;
   }
+
   .itemHead span {
     width: 2rem;
     font-size: 0.8rem;
@@ -662,24 +734,83 @@
   }
 
   .sticky_parent {
-    height: 1300vh;
+    height: 1000vh;
   }
   .scroll_section {
-    touch-action: pan-x;
-    width: 1300vw;
+    touch-action: pan-x; /*터치?*/
+    width: 1000vw;
+    margin-top: 2.5rem;
   }
-
-  /* esg */
+  .innoCon3 {
+    width: 27%;
+  }
+  .innoCon3 img {
+    width: 350px;
+    height: 200px;
+  }
+  .innoCon1 p {
+    font-size: 1rem;
+    padding: initial;
+    padding: 2rem 2rem 0;
+    word-break: keep-all;
+  }
+  .innoCon2 ul {
+    gap: 2rem;
+  }
+  .innoCon2 ul li:first-child .plusIcon {
+    right: -15px;
+  }
+  .innoCon2 ul li:first-child .plusIcon,
+  .innoCon2 ul li:nth-of-type(2) .plusIcon,
+  .innoCon2 ul li:nth-of-type(3) .plusIcon {
+    bottom: 70px;
+    right: 20px;
+    width: 10%;
+  }
+  .innoCon3 h2 {
+    font-size: 1.5rem;
+  }
+  .innoCon3 p {
+    font-size: 1rem;
+  }
+  .innoCon2 p {
+    font-size: 1rem;
+  }
+  /* 320esg */
+  #esg {
+    padding-top: var(--Top-03);
+    padding-bottom: var(--Bottom-03);
+  }
+  .esgIcons .icon:nth-of-type(2) {
+    top: 20rem;
+  }
+  .esgIcons .icon:nth-of-type(3) {
+    top: 43rem;
+  }
+  .esgIcons .icon:nth-of-type(4) {
+    top: 66rem;
+  }
   #esg > h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1.7;
   }
   .twoCol .colLeft {
-    height: 35vh;
+    height: 40vh;
+  }
+  .twoCol .colLeft .arBtn {
+    display: none;
   }
   .twoCol .colLeft p {
     font-size: 1.1rem;
   }
+  #respon {
+    padding-top: 25rem;
+  }
+  #report {
+    margin-top: var(--Top-03);
+    height: 95vh;
+  }
+
   #report .twoCol {
     padding: 2rem 0;
   }
@@ -689,10 +820,18 @@
   .reportLeft p {
     font-size: 1rem;
     margin-bottom: -3rem;
+    text-align: left;
+  }
+  .reportRight ul {
+    gap: 1.5rem;
+  }
+  .reportRight {
+    padding-top: 4rem;
   }
   .reportRight ul li {
     font-size: 1rem;
     grid-template-columns: 1.5fr 0.5fr;
+    padding-bottom: 1rem;
   }
   .esgIcons .iconSvg {
     width: 200px;
@@ -703,13 +842,16 @@
   .esgIcons p {
     font-size: 1rem;
   }
-  /* marketing */
+  /* 320marketing */
+  .stikyCo {
+    padding-top: 8rem;
+  }
   .stikyCo .mainText2 {
     height: 50px;
     margin-bottom: 0;
   }
   .newsText h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .newCon {
     width: 80%;
@@ -718,27 +860,44 @@
   .newCon ul {
     width: 500px;
     margin: 0 auto;
-    height: 130vh;
+    height: 230vh;
+    min-height: initial;
   }
   .newCon ul li {
     width: 100%;
+    height: initial;
   }
   .newCon ul li:nth-of-type(2) {
     top: 27rem;
   }
   .newCon ul li:nth-of-type(3) {
-    top: 52rem;
+    top: 54rem;
   }
   .newCon figure {
-    height: 20vh;
+    height: 45vh;
   }
   #infoCon .twoCol {
     width: 90%;
   }
   #infoCon h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+  #infoCon .twoCol {
+    padding: 5rem 0;
+    grid-template-rows: 50vh;
+  }
+  .twoCol .infoConLeft {
+    padding: 1.3rem 0 0 1.3rem;
+  }
+  .infoConRight .rightOne,
+  .infoConRight .rightTwo {
+    height: 30vh;
+    padding: 1rem;
   }
   .rightTwo .btPo li {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+  #infoCon {
+    padding-bottom: 0;
   }
 }
