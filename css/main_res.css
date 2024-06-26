@@ -128,14 +128,14 @@
   .infoText {
     height: 60vh;
   }
-  /* .mainTop,
-  .mainBottom {
-    height: 85vh;
-  } */
-  .img-box {
-    border: 1px solid red;
-    height: 60vh;
+  #info .img-box {
+    height: 50vh;
   }
+  .mainTop,
+  .mainBottom {
+    height: 80vh;
+  }
+
   .infoMain .subText {
     width: 80%;
     padding: 2.5rem 0;
@@ -269,13 +269,13 @@
   .infoText {
     height: 50vh;
   }
-  .img-box {
+  #info .img-box {
     height: 50vh;
   }
-  /* .mainTop,
+  .mainTop,
   .mainBottom {
-    height: 90vh;
-  } */
+    height: 110vh;
+  }
   .infoText h2 {
     font-size: 3.5rem;
   }
@@ -331,7 +331,7 @@
     bottom: -6rem;
   }
   #business {
-    padding-top: var(--Bottom-03);
+    padding-top: 3rem;
   }
   .mainText {
     margin-bottom: 2.5rem;

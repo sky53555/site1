@@ -28,9 +28,11 @@
   }
   /* 1440business */
   #innoGood .wrapCenter {
-    grid-template-columns: 1fr;
     width: fit-content;
     height: fit-content;
+  }
+  #innoGood h3 {
+    text-align: left;
   }
   .innoCon1 img {
     width: 250px;
@@ -370,8 +372,8 @@
     width: 15%;
   }
   .innoCon1 img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
   .innoCon2 {
     width: 20%;
@@ -668,6 +670,10 @@
   #dragBtn {
     width: 30%;
   }
+  .itemHead .dropBtn {
+    font-size: 1rem;
+  }
+
   #value {
     padding-top: var(--Top-03);
     padding-bottom: var(--Bottom-03);
@@ -696,9 +702,16 @@
   }
   .innoCon2 {
     padding: 1rem;
+    width: 20%;
   }
   .innoCon2 ul {
     margin-left: 0;
+  }
+  .innoCon2 ul li img {
+    width: 40%;
+  }
+  .innoCon2 ul li:nth-of-type(3) img:not(.plusIcon) {
+    width: 35%;
   }
   .innoCon2 .num {
     font-size: 2rem;
@@ -708,9 +721,11 @@
     height: 70%;
     gap: 3rem;
     margin-top: -4rem;
+    grid-template-columns: 1fr;
   }
   #innoGood h3 {
     font-size: 2rem;
+    text-align: center;
   }
   .innoText li {
     font-size: 1rem;
@@ -758,13 +773,15 @@
     gap: 2rem;
   }
   .innoCon2 ul li:first-child .plusIcon {
-    right: -15px;
+    right: 30px;
+    bottom: 70px;
+    width: 10%;
   }
-  .innoCon2 ul li:first-child .plusIcon,
+
   .innoCon2 ul li:nth-of-type(2) .plusIcon,
   .innoCon2 ul li:nth-of-type(3) .plusIcon {
     bottom: 70px;
-    right: 20px;
+    right: 35px;
     width: 10%;
   }
   .innoCon3 h2 {
@@ -775,6 +792,8 @@
   }
   .innoCon2 p {
     font-size: 1rem;
+    width: 80%;
+    margin: 0 auto;
   }
   /* 320esg */
   #esg {

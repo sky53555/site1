@@ -1,12 +1,13 @@
-/**
- * 헤더 보이고 숨기기
- */
 
 document.addEventListener("DOMContentLoaded", function () {
+
+/**
+ * header, backtotop, nav link
+ */
   let header = document.querySelector("header");
   let backtoTop = document.querySelector(".backtoTop");
   let a = header.querySelectorAll(".navWrap ul a");
-  console.log(a);
+
   a.forEach((item) => {
     item.addEventListener("click", () => {
       a.forEach((a) => {
@@ -48,29 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
-  // window.addEventListener("scroll", function () {
-  //   if (window.scrollY >= 50) {
-  //     header.classList.add("active");
-  //     backtoTop.classList.add("active");
-  //   } else if (window.scrollY < 10) {
-  //     header.classList.remove("active");
-  //     backtoTop.classList.remove("active");
-  //   }
-  // });
-
-  // function toggleButton() {
-  //   if (window.innerWidth <= 320) {
-  //     backtoTop.style.display = "none"; // 화면 너비가 320픽셀 이하면 버튼을 숨김
-  //   } else {
-  //     backtoTop.style.display = "block"; // 그 외의 경우에는 버튼을 보이게 함
-  //     backtoTop.addEventListener("click", function () {
-  //       window.scrollTo({
-  //         top: 0,
-  //         behavior: "smooth", // 스크롤을 부드럽게 상단으로 이동
-  //       });
-  //     });
-  //   }
-  // }
 
   // 페이지 로드 시 버튼 상태 확인
   toggleButton();
@@ -78,6 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // 창 크기가 변경될 때마다 버튼 상태 업데이트
   window.addEventListener("resize", toggleButton);
 
+
+  /**
+   * nav link 업데이트
+   */
   if (header) {
     const links = header.querySelectorAll(".navWrap ul a");
     links.forEach((link, index) => {
@@ -112,8 +94,9 @@ document.addEventListener("DOMContentLoaded", function () {
       link.classList.remove("clicked");
     });
   }
+
   /**
-   * hiddenLang
+   * hidden Lang
    */
   let lang = document.querySelector(".langWrap");
 
