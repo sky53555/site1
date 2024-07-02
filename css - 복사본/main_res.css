@@ -131,25 +131,25 @@
   #info .img-box {
     height: 50vh;
   }
+  .mainTop,
+  .mainBottom {
+    height: 80vh;
+  }
 
   .infoMain .subText {
     width: 80%;
     padding: 2.5rem 0;
   }
   .mainlogo {
-    width: 600px;
+    width: 500px;
     height: 600px;
-    bottom: -8rem;
+    bottom: -10rem;
   }
   .text-box {
     transform: translateX(-3rem);
   }
   .hiddenNav ul li {
     text-align: center;
-  }
-  .mainTop,
-  .mainBottom {
-    height: initial;
   }
   .mainText {
     margin-bottom: -1rem;
@@ -234,119 +234,25 @@
   }
 }
 /**
-  *375px
+  *400px
   */
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   .hero .slider-btn {
     display: none;
-  }
-  .hiddenNav ul li a {
-    font-size: 1.5rem;
-  }
-  .hiddenNav ul {
-    gap: 2rem;
-  }
-  .navWrap #logo img {
-    width: 60%;
-  }
-  .navWrap .lang {
-    display: none;
-  }
-  .toggleBtn {
-    width: 30px;
-    height: 20px;
-    justify-self: end;
-  }
-  .toggleBtn.active span:nth-of-type(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-  .toggleBtn.active span:nth-of-type(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-  .hero {
-    height: 100vh;
-  }
-  .section-subtitle {
-    font-size: 1rem;
-  }
-  .hero-title {
-    font-size: 2rem;
-  }
-  .hero-text {
-    font-size: 1rem;
-  }
-  .text-wrap {
-    display: none;
-  }
-  .mainlogo {
-    max-width: 400px;
-    bottom: -17rem;
-  }
-  .infoText h4 {
-    font-size: 2rem;
-  }
-  .topText p {
-    font-size: 1.2rem;
-  }
-  .mainTop,
-  .mainBottom {
-    height: initial;
-  }
-  .infoMain h2 {
-    font-size: 1.3rem;
-  }
-  .infoMain .subText p {
-    font-size: 1rem;
-    padding-bottom: 2rem;
-  }
-  ul li .boxText h5 {
-    font-size: 1.2rem;
-  }
-  ul li .boxText p {
-    margin-top: 0;
-    font-size: 0.8rem;
-  }
-  .cardBox ul li:nth-child(1)::after,
-  .cardBox ul li:nth-child(2)::after,
-  .cardBox ul li:nth-child(3)::after {
-    background-size: 3rem;
-  }
-  #business {
-    padding-top: var(--Top-03);
-  }
-  #network {
-    padding-bottom: 10rem;
-  }
-  .netMap {
-    transform: scale(1.2);
-  }
-  .footerLeft .fText {
-    width: 100%;
-    margin-bottom: 0rem;
-  }
-  .social {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-  .social ion-icon {
-    margin-right: 0;
-  }
-  .netText p {
-    font-size: var(--fontSize-body-3);
-    margin-bottom: 1rem;
-  }
-  .netText p span {
-    font-size: 2rem;
   }
 }
 /**
   *320px
   */
 @media (max-width: 320px) {
-  .navWrap #logo img {
-    width: 50%;
+  .hiddenNav ul li a {
+    font-size: 1.5rem;
+  }
+  .hiddenNav ul {
+    gap: 2rem;
+  }
+  .hero {
+    height: 100vh;
   }
   .hero-title {
     font-size: 1.8rem;
@@ -361,19 +267,24 @@
     font-size: 1.1rem;
   }
   .infoText {
-    height: 60vh;
+    height: 50vh;
   }
   #info .img-box {
     height: 50vh;
   }
-
+  .mainTop,
+  .mainBottom {
+    height: 110vh;
+  }
   .infoText h2 {
     font-size: 3.5rem;
   }
   .infoText h4 {
     font-size: 2rem;
   }
-
+  .text-wrap {
+    display: none;
+  }
   .infoMain h2 {
     font-size: 1.5rem;
   }
@@ -396,10 +307,25 @@
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
   }
-
+  .navWrap #logo img {
+    width: 60%;
+  }
+  .navWrap .lang {
+    display: none;
+  }
+  .toggleBtn {
+    width: 30px;
+    height: 20px;
+    justify-self: end;
+  }
+  .toggleBtn.active span:nth-of-type(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .toggleBtn.active span:nth-of-type(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
   .mainlogo {
-    max-width: 300px;
-    bottom: -17rem;
+    transform: scale(0.7);
   }
   .logo-container {
     bottom: -6rem;
@@ -435,19 +361,24 @@
   .cardBox ul li:nth-child(2)::before,
   .cardBox ul li:nth-child(3)::before {
     left: -8rem;
-    bottom: -10rem;
+    bottom: -12rem;
   }
   .cardBox ul li .boxText {
     left: 1rem;
     top: 1rem;
   }
-
+  ul li .boxText h5 {
+    font-size: 1.2rem;
+  }
+  ul li .boxText p {
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
   .mainText h5 {
     font-size: var(--fontSize-body-3);
   }
-  .netMap .dots span {
-    width: 5px;
-    height: 5px;
+  .dots {
+    display: none;
   }
   #network {
     padding-top: 10rem;
@@ -462,14 +393,24 @@
     justify-content: center;
   }
   .netMap img {
-    width: 100%;
+    width: 200%;
   }
-  @keyframes pulse {
-    0% {
-      box-shadow: 0 0 0 0 #002aff;
-    }
-    100% {
-      box-shadow: 0 0 0 10px #0421ff00;
-    }
+
+  .netText p {
+    font-size: var(--fontSize-body-3);
+    margin-bottom: 1rem;
+  }
+  .footerLeft .fText {
+    width: 100%;
+    margin-bottom: 0rem;
+  }
+  .social {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .social ion-icon {
+    margin-right: 0;
   }
 }

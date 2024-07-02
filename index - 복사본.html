@@ -119,7 +119,7 @@
                 건축물과 자연이 조화로운 삶을 제공합니다
               </p>
             </li>
-            <li class="slider-item" data-hero-slider-item>
+            <li class="slider-item active" data-hero-slider-item>
               <div class="slider-bg">
                 <img
                   src="image/lightsbuildings.jpg"
@@ -142,7 +142,7 @@
                 공간을 조성합니다
               </p>
             </li>
-            <li class="slider-item" data-hero-slider-item>
+            <li class="slider-item active" data-hero-slider-item>
               <div class="slider-bg">
                 <img
                   src="image/traffic-downtown-hong-kong.jpg"
@@ -167,15 +167,9 @@
             </li>
           </ul>
           <div class="btns">
-            <span class="slider-btn" data-index="0"
-              ><span class="progress"></span
-            ></span>
-            <span class="slider-btn" data-index="1"
-              ><span class="progress"></span
-            ></span>
-            <span class="slider-btn" data-index="2"
-              ><span class="progress"></span
-            ></span>
+            <span class="slider-btn"></span>
+            <span class="slider-btn"></span>
+            <span class="slider-btn"></span>
           </div>
         </section>
 
@@ -575,132 +569,83 @@
        * HERO SLIDER
        */
 
-      // const heroSlider = document.querySelector("[data-hero-slider]");
-      // const heroSliderItems = document.querySelectorAll(
-      //   "[data-hero-slider-item]"
-      // );
+      const heroSlider = document.querySelector("[data-hero-slider]");
+      const heroSliderItems = document.querySelectorAll(
+        "[data-hero-slider-item]"
+      );
 
-      // let btns = document.querySelectorAll(".slider-btn");
+      let btns = document.querySelectorAll(".slider-btn");
 
-      // let currentSlidePos = 0;
-      // let lastActiveSliderItem = heroSliderItems[0];
-      // let btnsItem = btns[0];
+      let currentSlidePos = 0;
+      let lastActiveSliderItem = heroSliderItems[0];
+      let btnsItem = btns[0];
 
-      // btns[0].classList.add("active");
+      btns[0].classList.add("active");
 
-      // // 페이지 로드 시 첫 번째 슬라이드를 표시
-      // heroSliderItems.forEach((slide, index) => {
-      //   if (index === 0) {
-      //     slide.classList.add("active");
-      //   } else {
-      //     slide.classList.remove("active");
-      //   }
-      // });
-
-      // btns.forEach((btn, index) => {
-      //   btn.addEventListener("click", () => {
-      //     // 현재 활성화된 슬라이드와 버튼을 비활성화합니다.
-      //     const currentActiveSlide = document.querySelector(
-      //       ".slider-item.active"
-      //     );
-      //     const currentActiveBtn = document.querySelector(".slider-btn.active");
-      //     currentActiveSlide.classList.remove("active");
-      //     currentActiveBtn.classList.remove("active");
-
-      //     // 클릭한 버튼과 해당 슬라이드를 활성화합니다.
-      //     heroSliderItems[index].classList.add("active");
-      //     btn.classList.add("active");
-
-      //     currentSlidePos = index;
-      //     clearInterval(autoSlideInterval);
-      //     autoSlide();
-      //   });
-      // });
-
-      // const updateSliderPos = function () {
-      //   // 모든 슬라이드와 버튼에서 'active' 클래스 제거
-      //   heroSliderItems.forEach((item) => item.classList.remove("active"));
-      //   btns.forEach((button) => button.classList.remove("active"));
-
-      //   // 현재 슬라이드와 버튼에 'active' 클래스 추가
-      //   heroSliderItems[currentSlidePos].classList.add("active");
-      //   btns[currentSlidePos].classList.add("active");
-
-      //   // 'lastActiveSliderItem'과 'btnsItem' 업데이트
-      //   lastActiveSliderItem = heroSliderItems[currentSlidePos];
-      //   btnsItem = btns[currentSlidePos];
-      // };
-      // const slideNext = function () {
-      //   if (currentSlidePos >= heroSliderItems.length - 1) {
-      //     currentSlidePos = 0;
-      //   } else {
-      //     currentSlidePos++;
-      //   }
-      //   updateSliderPos();
-      // };
-      let currentSlideIndex = 0;
-      const sliderItems = document.querySelectorAll(".slider-item");
-      const sliderBtns = document.querySelectorAll(".slider-btn");
-      const slideDuration = 6000; // 6초
-      let autoSlideInterval;
-
-      function updateSlider(newIndex) {
-        // 현재 슬라이드 비활성화
-        sliderItems[currentSlideIndex].classList.remove("active");
-        sliderBtns[currentSlideIndex].classList.remove("active");
-
-        // 새 슬라이드 활성화
-        currentSlideIndex = newIndex;
-        sliderItems[currentSlideIndex].classList.add("active");
-        sliderBtns[currentSlideIndex].classList.add("active");
-
-        // 프로그레스 바 리셋 및 시작
-        resetProgress();
-        startProgress();
-      }
-
-      function resetProgress() {
-        sliderBtns.forEach((btn) => {
-          const progress = btn.querySelector(".progress");
-          if (progress) {
-            progress.style.transition = "none"; // 트랜지션 비활성화
-            progress.style.left = "-100%"; // 왼쪽 밖으로 이동
-          }
-        });
-      }
-
-      function startProgress() {
-        const currentBtn = sliderBtns[currentSlideIndex];
-        const progress = currentBtn.querySelector(".progress");
-        if (progress) {
-          setTimeout(() => {
-            progress.style.transition = "left 6s linear"; // 트랜지션 다시 활성화
-            progress.style.left = "0"; // 오른쪽으로 이동 시작
-          }, 50);
+      // 페이지 로드 시 첫 번째 슬라이드를 표시
+      heroSliderItems.forEach((slide, index) => {
+        if (index === 0) {
+          slide.classList.add("active");
+        } else {
+          slide.classList.remove("active");
         }
-      }
+      });
 
-      function autoSlide() {
-        clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(() => {
-          updateSlider((currentSlideIndex + 1) % sliderItems.length);
-        }, slideDuration);
-      }
-
-      // 슬라이더 버튼 클릭 이벤트
-      sliderBtns.forEach((btn, index) => {
+      btns.forEach((btn, index) => {
         btn.addEventListener("click", () => {
+          // 현재 활성화된 슬라이드와 버튼을 비활성화합니다.
+          const currentActiveSlide = document.querySelector(
+            ".slider-item.active"
+          );
+          const currentActiveBtn = document.querySelector(".slider-btn.active");
+          currentActiveSlide.classList.remove("active");
+          currentActiveBtn.classList.remove("active");
+
+          // 클릭한 버튼과 해당 슬라이드를 활성화합니다.
+          heroSliderItems[index].classList.add("active");
+          btn.classList.add("active");
+
+          currentSlidePos = index;
           clearInterval(autoSlideInterval);
-          updateSlider(index);
           autoSlide();
         });
       });
 
-      // 초기 슬라이더 설정 및 자동 슬라이드 시작
-      window.addEventListener("load", () => {
-        updateSlider(0);
-        autoSlide();
-      });
+      const updateSliderPos = function () {
+        // 모든 슬라이드와 버튼에서 'active' 클래스 제거
+        heroSliderItems.forEach((item) => item.classList.remove("active"));
+        btns.forEach((button) => button.classList.remove("active"));
+
+        // 현재 슬라이드와 버튼에 'active' 클래스 추가
+        heroSliderItems[currentSlidePos].classList.add("active");
+        btns[currentSlidePos].classList.add("active");
+
+        // 'lastActiveSliderItem'과 'btnsItem' 업데이트
+        lastActiveSliderItem = heroSliderItems[currentSlidePos];
+        btnsItem = btns[currentSlidePos];
+      };
+      const slideNext = function () {
+        if (currentSlidePos >= heroSliderItems.length - 1) {
+          currentSlidePos = 0;
+        } else {
+          currentSlidePos++;
+        }
+        updateSliderPos();
+      };
+
+      /**
+       * auto slide
+       */
+
+      let autoSlideInterval;
+
+      const autoSlide = function () {
+        autoSlideInterval = setInterval(function () {
+          slideNext();
+        }, 6000);
+      };
+
+      window.addEventListener("load", autoSlide);
 
       /**
        * reveal
