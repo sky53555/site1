@@ -129,7 +129,7 @@ svg:nth-of-type(3) {
   font-size: 1rem;
 }
 .circles svg.start-animation circle.anime1 {
-  animation-delay: 1s;
+  animation-delay: 0;
 }
 
 .circles svg.start-animation circle.anime2 {
@@ -137,7 +137,7 @@ svg:nth-of-type(3) {
 }
 
 .circles svg.start-animation circle.anime3 {
-  animation-delay: 5s;
+  animation-delay: 6s;
 }
 
 .circles svg.start-animation text.text1 {
@@ -145,11 +145,11 @@ svg:nth-of-type(3) {
 }
 
 .circles svg.start-animation text.text2 {
-  animation-delay: 4s;
+  animation-delay: 5s;
 }
 
 .circles svg.start-animation text.text3 {
-  animation-delay: 6s;
+  animation-delay: 8s;
 }
 /* .text1 {
   animation-delay: 4s;
@@ -928,8 +928,10 @@ body.sub3-body {
 /*-----------------------------------*\
   #SUB - marketing
 \*-----------------------------------*/
+html,
 body.sub4-body {
   color: #fff;
+  overflow-x: initial;
 }
 .subMenu4 {
   background: url(../image/usingphone.jpg) center/cover no-repeat;
