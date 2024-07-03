@@ -29,11 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("footer").offsetHeight +
       500; // 푸터의 높이 포함
 
-    console.log(scrollableHeight);
-    console.log(window.scrollY + "window.scrollY");
     // 현재 스크롤 위치가 문서의 맨 아래에 도달했는지 확인
     if (window.scrollY >= scrollableHeight) {
       backtoTop.classList.add("active");
+      console.log("add");
     } else {
       backtoTop.classList.remove("active");
     }
