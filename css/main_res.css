@@ -363,11 +363,23 @@
   #business {
     padding-top: var(--Top-03);
   }
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 #002aff;
+    }
+    100% {
+      box-shadow: 0 0 0 10px #0421ff00;
+    }
+  }
   #network {
     padding-bottom: 10rem;
   }
   .netMap {
     transform: scale(1.2);
+  }
+  .netMap .dots span {
+    width: 10px;
+    height: 10px;
   }
   .footerLeft .fText {
     width: 100%;
